@@ -8,9 +8,9 @@ Simple Notes is a material Design App with Colorful Notes.
 
 # Featues:
 
-Supports HyperLinks.
-Password Protection.
-Add Photos.
-Save in favourite list
-Trash option.
+     Supports HyperLinks.
+     Password Protection.
+     Add Photos.
+     Save in favourite list
+     Trash option.
 
