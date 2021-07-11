@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/addURLDialogContainer"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/_10sdp"
+    android:layout_gravity="center"
+    android:background="@drawable/background_dialog">
+
+    <ImageView
+        android:id="@+id/iconWeb"
+        android:layout_width="@dimen/_25sdp"
+        android:layout_height="@dimen/_25sdp"
+        android:layout_marginStart="@dimen/_8sdp"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/ic_web_link"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:tint="@color/colorAccent" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_8sdp"
+        android:gravity="center_vertical"
+        android:fontFamily="@font/ubuntu_bold"
+        android:includeFontPadding="false"
+        android:text="@string/add_url"
+        android:textSize="@dimen/_13ssp"
+        android:textColor="@color/colorAccent"
+        app:layout_constraintStart_toEndOf="@+id/iconWeb"
+        app:layout_constraintTop_toTopOf="@id/iconWeb"
+        app:layout_constraintBottom_toBottomOf="@+id/iconWeb"/>
+
+    <EditText
+        android:id="@id/inputAddURL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:layout_marginStart="@dimen/_8sdp"
+        android:layout_marginEnd="@dimen/_8sdp"
+        android:padding="@dimen/_8sdp"
+        android:hint="@string/enter_url"
+        android:background="@null"
+        android:fontFamily="@font/ubuntu_medium"
+        android:includeFontPadding="false"
+        android:importantForAutofill="no"
+        android:imeOptions="actionDone"
+        android:inputType="textUri"
+        android:textSize="@dimen/_13ssp"
+        android:textColor="@color/colorWhite"
+        android:textColorHint="@color/colorTextHint"
+        app:layout_constraintTop_toBottomOf="@+id/iconWeb"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/textAdd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/ubuntu_bold"
+        android:layout_marginEnd="@dimen/_8sdp"
+        android:padding="@dimen/_8sdp"
+        android:includeFontPadding="false"
+        android:text="@string/add"
+        android:textSize="@dimen/_13ssp"
+        android:textColor="@color/colorAccent"
+        app:layout_constraintTop_toBottomOf="@+id/inputAddURL"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <TextView
+        android:id="@+id/textCancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/ubuntu_bold"
+        android:padding="@dimen/_8sdp"
+        android:includeFontPadding="false"
+        android:text="@string/cancel"
+        android:textSize="@dimen/_13ssp"
+        android:textColor="@color/colorAccent"
+        app:layout_constraintTop_toTopOf="@id/textAdd"
+        app:layout_constraintBottom_toBottomOf="@+id/textAdd"
+        app:layout_constraintEnd_toStartOf="@+id/textAdd"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

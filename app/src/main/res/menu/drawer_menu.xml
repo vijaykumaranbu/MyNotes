@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/notes_menu"
+            android:icon="@drawable/ic_create"
+            android:iconTint="@color/colorIcon"
+            android:title="Notes" />
+        <item
+            android:id="@+id/favorite_menu"
+            android:icon="@drawable/ic_favorite"
+            android:iconTint="@color/colorIcon"
+            android:title="Favorite" />
+        <item
+            android:id="@+id/locked_menu"
+            android:icon="@drawable/ic_lock"
+            android:iconTint="@color/colorIcon"
+            android:title="Locked" />
+        <item
+            android:id="@+id/trash_menu"
+            android:icon="@drawable/ic_delete"
+            android:iconTint="@color/colorIcon"
+            android:title="Trash" />
+
+        <item
+            android:id="@+id/settings_menu"
+            android:icon="@drawable/ic_settings"
+            android:iconTint="@color/colorIcon"
+            android:title="Settings" />
+    </group>
+
+    <item android:title="@string/communicate">
+        <menu>
+            <item
+                android:id="@+id/rateThisApp_menu"
+                android:icon="@drawable/ic_rate"
+                android:iconTint="@color/colorIcon"
+                android:title="Rate this app" />
+            <item
+                android:id="@+id/share_menu"
+                android:icon="@drawable/ic_share"
+                android:iconTint="@color/colorIcon"
+                android:title="Share" />
+        </menu>
+    </item>
+
+</menu>
