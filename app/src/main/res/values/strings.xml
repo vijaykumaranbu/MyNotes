@@ -45,4 +45,8 @@
     <string name="note_pincode">Note Pincode</string>
     <string name="pincode_unset">Pincode Unset</string>
     <string name="settings">Settings</string>
+    <string name="save_note">Save Note</string>
+    <string name="do_you_want_save_this_note">Do you want save this note?</string>
+    <string name="no">No</string>
+    <string name="yes">Yes</string>
 </resources>

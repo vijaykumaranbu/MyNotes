@@ -18,10 +18,11 @@
        android:layout_width="wrap_content"
        android:layout_height="match_parent"
        style="@style/Widget.Custom.NavigationView"
+       android:background="@color/colorMiscellaneousBackground"
        android:clipToPadding="false"
        android:fitsSystemWindows="true"
        android:layout_gravity="start"
        app:headerLayout="@layout/drawer_navigation_header"
-       app:menu="@menu/drawer_menu" />
+       app:menu="@menu/drawer_menu"/>
 
 </androidx.drawerlayout.widget.DrawerLayout>

@@ -4,10 +4,19 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/addURLDialogContainer"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_margin="@dimen/_10sdp"
-    android:layout_gravity="center"
-    android:background="@drawable/background_dialog">
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:layout_gravity="center"
+        android:background="@drawable/background_dialog"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
 
     <ImageView
         android:id="@+id/iconWeb"
@@ -85,5 +94,7 @@
         app:layout_constraintTop_toTopOf="@id/textAdd"
         app:layout_constraintBottom_toBottomOf="@+id/textAdd"
         app:layout_constraintEnd_toStartOf="@+id/textAdd"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

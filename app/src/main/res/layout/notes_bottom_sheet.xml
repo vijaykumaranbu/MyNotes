@@ -6,6 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
+    android:background="@drawable/background_miscellaneous"
     android:paddingStart="@dimen/_20sdp"
     android:paddingEnd="@dimen/_20sdp"
     android:paddingTop="@dimen/_10sdp"

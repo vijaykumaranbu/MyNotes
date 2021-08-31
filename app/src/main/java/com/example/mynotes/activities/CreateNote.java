@@ -8,6 +8,7 @@ import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Color;
+import android.graphics.Typeface;
 import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.GradientDrawable;
 import android.net.Uri;
@@ -30,6 +31,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.coordinatorlayout.widget.CoordinatorLayout;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
+import androidx.core.content.res.ResourcesCompat;
 import androidx.lifecycle.ViewModelProvider;
 
 import com.example.mynotes.R;
@@ -55,7 +57,7 @@ public class CreateNote extends AppCompatActivity {
     private String selectedImagePath;
     private LinearLayout layoutWebURL;
     private TextView textWebURL;
-    private AlertDialog dialogAddURL;
+    private AlertDialog dialogAddURL,dialogSaveNote;
     private AlertDialog dialogDeleteNote;
     private Note alreadyAvailableNote;
     private NoteViewModel noteViewModel;
@@ -519,4 +521,42 @@ public class CreateNote extends AppCompatActivity {
 
         dialogDeleteNote.show();
     }
+
+    @Override
+    public void onBackPressed() {
+        if(!inputTitle.getText().toString().isEmpty() &&
+        !inputSubtitle.getText().toString().isEmpty() &&
+        !inputNoteText.getText().toString().isEmpty()){
+            showSaveNoteDialog();
+        }
+        else
+            super.onBackPressed();
+    }
+
+    private void showSaveNoteDialog(){
+        AlertDialog.Builder builder = new AlertDialog.Builder(CreateNote.this);
+        View view = LayoutInflater.from(getApplicationContext()).inflate(
+          R.layout.dialog_save_note, (ViewGroup) findViewById(R.id.dialogSaveNote)
+        );
+        builder.setView(view);
+        dialogSaveNote = builder.create();
+        if(dialogSaveNote.getWindow() != null){
+            dialogSaveNote.getWindow().setBackgroundDrawable(new ColorDrawable(0));
+        }
+        TextView textYes = view.findViewById(R.id.textYesDialog);
+        TextView textNo = view.findViewById(R.id.textNoDialog);
+        Typeface font = ResourcesCompat.getFont(getApplicationContext(),R.font.ubuntu_bold);
+        textYes.setTypeface(font);
+        textNo.setTypeface(font);
+        textYes.setOnClickListener(view1 -> {
+            saveNote();
+            super.onBackPressed();
+        });
+        textNo.setOnClickListener(view12 -> {
+            dialogSaveNote.dismiss();
+            super.onBackPressed();
+        });
+        dialogSaveNote.show();
+    }
+
 }

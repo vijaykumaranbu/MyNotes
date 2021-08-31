@@ -89,7 +89,7 @@
             android:layout_height="wrap_content"
             android:src="@drawable/ic_create"
             fab:fab_size="mini"
-            fab:fab_label="Create Note" />
+            fab:fab_label="Create Note"/>
 
     </com.github.clans.fab.FloatingActionMenu>
 

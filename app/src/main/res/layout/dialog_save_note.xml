@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/dialogSaveNote"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background_dialog"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:padding="@dimen/_8sdp"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:includeFontPadding="false"
+            android:fontFamily="@font/ubuntu_bold"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/save_note"
+            android:textColor="@color/colorAccent"
+            android:textSize="@dimen/_16ssp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:fontFamily="@font/ubuntu_medium"
+            android:includeFontPadding="false"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/do_you_want_save_this_note"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/_14ssp"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_8sdp">
+
+            <TextView
+                android:id="@+id/textNoDialog"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_8sdp"
+                android:fontFamily="@font/ubuntu_bold"
+                android:layout_toStartOf="@+id/textYesDialog"
+                android:padding="@dimen/_4sdp"
+                android:text="@string/no"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/_14ssp"/>
+
+            <TextView
+                android:id="@+id/textYesDialog"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_8sdp"
+                android:fontFamily="@font/ubuntu_bold"
+                android:layout_alignParentEnd="true"
+                android:padding="@dimen/_4sdp"
+                android:text="@string/yes"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/_14ssp"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
