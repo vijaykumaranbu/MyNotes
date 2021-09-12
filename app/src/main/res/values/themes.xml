@@ -34,6 +34,13 @@
         <item name="itemShapeFillColor">@color/background_menu_item</item>
     </style>
 
+    <style name="NavigationViewTheme">
+        <item name="android:textSize">@dimen/_10ssp</item>  // menu item text size
+        <item name="listPreferredItemHeightSmall">@dimen/_40sdp</item>  // menu item height
+        <item name="android:textColorPrimary">@color/colorWhite</item>
+        <item name="android:textColorSecondary">@color/colorWhite</item>
+    </style>
+
     <style name="CustomBottomSheetTheme" parent="@style/ThemeOverlay.MaterialComponents.BottomSheetDialog">
         <item name="bottomSheetStyle">@style/CustomBottomSheetStyle</item>
     </style>

@@ -73,7 +73,7 @@
             android:layout_height="wrap_content"
             android:src="@drawable/ic_web_link"
             fab:fab_size="mini"
-            fab:fab_label="Web Link" />
+            fab:fab_label="Web Link"/>
 
         <com.github.clans.fab.FloatingActionButton
             android:id="@+id/imageNewNote"
@@ -81,7 +81,7 @@
             android:layout_height="wrap_content"
             android:src="@drawable/ic_image"
             fab:fab_size="mini"
-            fab:fab_label="Add Image" />
+            fab:fab_label="Add Image"/>
 
         <com.github.clans.fab.FloatingActionButton
             android:id="@+id/newNote"
